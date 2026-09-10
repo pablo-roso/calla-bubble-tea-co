@@ -1,259 +1,343 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calla Bubble Tea Co. — Bubble Tea &amp; Desserts in Freiburg</title>
-<meta name="description" content="Calla Bubble Tea Co. in Freiburg im Breisgau: frisch gemixter Bubble Tea, vielfältige Toppings und süße Desserts. Website-Entwurf.">
-<meta name="theme-color" content="#f7c9df">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23a687d6' d='M52 8c-19 0-34 14-35 33-1 20 12 39 31 47 5 2 10 0 12-5 9-20 8-45-4-62-2-3-4-7-4-13z'/%3E%3C/svg%3E">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calla Bubble Tea Co. — Habsburgerstraße 72, Freiburg</title>
+<meta name="description" content="Calla Bubble Tea Co., Habsburgerstraße 72 in Freiburg: frisch gemixter Bubble Tea zum Mitnehmen und Liefern. Woraus ein Becher besteht, welches Topping den Weg übersteht und wie bestellt wird." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23fbfaf6'/%3E%3Cpath d='M16 27c-5-3-8-9-6-14 1.6-4 6-6 9-4 2 1.4 2 4 0 6-1.6 1.6-4 1-4-1' fill='none' stroke='%232f4a34' stroke-width='2'/%3E%3Cpath d='M16 27V15' stroke='%236f8f6a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
 </head>
 <body>
 
-<!-- Reusable inline SVG symbol: stylized Calla lily motif -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="calla-flower" viewBox="0 0 100 100">
-      <path d="M52 8c-19 0-34 14-35 33-1 20 12 39 31 47 5 2 10 0 12-5 9-20 8-45-4-62-2-3-4-7-4-13z" fill="currentColor"/>
-      <path d="M50 20c6 12 7 30 1 44-1 3-3 5-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".35"/>
-      <path d="M46 86c-4 6-6 9-14 10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".55"/>
-    </symbol>
-  </defs>
-</svg>
+<a class="skip-link" href="#main">Direkt zum Inhalt</a>
 
-<header class="site-header">
-  <div class="container nav">
-    <a href="#top" class="brand">
-      <svg class="flower-icon" style="color:var(--lilac-deep)"><use href="#calla-flower"/></svg>
-      Calla Bubble Tea Co.
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Calla Bubble Tea Co. — Start">
+      <svg class="brand-mark" viewBox="0 0 36 40" fill="none" aria-hidden="true">
+        <path d="M18 30c-7-4-11-13-8-19 2.4-5 8.6-7 12.4-4.4 3 2 3 6 .4 8.4-2.2 2-5.4 1-5.4-1.6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+        <path d="M18 38V20" stroke="#6f8f6a" stroke-width="2" stroke-linecap="round" />
+        <path d="M18 28c-4-1-7-4-8-8" stroke="#6f8f6a" stroke-width="1.6" fill="none" stroke-linecap="round" />
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Calla</span>
+        <span class="brand-sub">Bubble Tea Co. · Habsburgerstraße 72</span>
+      </span>
     </a>
 
-    <input type="checkbox" id="nav-check">
-    <ul class="nav-links">
-      <li><a href="#ueber-uns">Über uns</a></li>
-      <li><a href="#highlights">Highlights</a></li>
-      <li><a href="#bestellen">Bestellen</a></li>
-      <li><a href="#kontakt">Standort &amp; Kontakt</a></li>
-      <li class="nav-cta"><a href="#bestellen" class="btn btn-primary">Jetzt bestellen</a></li>
-    </ul>
-    <label class="nav-toggle" for="nav-check" aria-label="Menü öffnen">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </label>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="mainNav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#anatomie">Anatomie</a></li>
+        <li><a href="#toppings">Toppings</a></li>
+        <li><a href="#unterwegs">Unterwegs</a></li>
+        <li><a href="#bestellen">Bestellen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <a class="header-cta" href="#bestellen">Bestellen</a>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
-  <!-- ================= HERO ================= -->
+  <!-- ================= HERO =================
+       Der Laden hat keine Sitzfläche. Das im alten Entwurf halb
+       entschuldigend erwähnte Detail ist in Wahrheit die Positionierung:
+       ein Becher, der für den Weg gebaut ist. -->
   <section class="hero">
-    <svg class="hero-blossom" style="color:var(--lilac)" aria-hidden="true"><use href="#calla-flower"/></svg>
-    <svg class="hero-blossom-2" style="color:var(--pink-deep)" aria-hidden="true"><use href="#calla-flower"/></svg>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Habsburgerstraße 72 · Freiburg im Breisgau</p>
+        <h1>Gebaut für den Weg,<br />nicht für den Tisch.</h1>
+        <p class="hero-lead">
+          Bei uns bleibt niemand sitzen — es gibt keine Stühle, und das ist
+          Absicht. Der Becher wird frisch gemixt, verschweißt und geht mit:
+          zur Uni, in die Mittagspause, durch die Innenstadt oder gleich per
+          Lieferdienst nach Hause.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#anatomie">Woraus ein Becher besteht</a>
+          <a class="btn btn-outline" href="#bestellen">Bestellen</a>
+        </div>
+      </div>
 
-    <div class="container hero-inner">
-      <span class="eyebrow">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v20M2 12h20"/></svg>
-        Bubble Tea &amp; Dessert-Shop in Freiburg
-      </span>
-      <h1>Bubble Tea, so verspielt<br><span>wie eine Blüte im Frühling.</span></h1>
-      <p class="claim">Calla Bubble Tea Co. bringt frisch gemixte Bubble-Tea-Kreationen, knackige Toppings und kleine süße Auszeiten in die Habsburgerstraße — zum Mitnehmen, Liefern oder einfach zum Genießen zwischendurch.</p>
-      <div class="hero-actions">
-        <a href="#bestellen" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2l1.5 3M18 2l-1.5 3"/><path d="M4 8h16l-1.6 10.2A3 3 0 0 1 15.4 21H8.6a3 3 0 0 1-3-2.8L4 8z"/><path d="M4 8a4 4 0 0 1 8 0 4 4 0 0 1 8 0"/></svg>
-          Jetzt bestellen
-        </a>
-        <a href="#kontakt" class="btn btn-outline">Standort ansehen</a>
+      <!-- Calla als botanische Zeichnung: eine Blüte, feine Linien. -->
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 260 360" fill="none">
+          <path d="M130 244c-40-24-64-76-46-112 14-28 50-38 72-24 18 12 18 34 2 48-13 12-32 6-32-10"
+                stroke="#2f4a34" stroke-width="2.4" fill="#fdfcf7" stroke-linecap="round" />
+          <path d="M126 146c8-10 22-12 30-4" stroke="#e8c765" stroke-width="9" stroke-linecap="round" />
+          <path d="M130 344V180" stroke="#6f8f6a" stroke-width="3.4" stroke-linecap="round" />
+          <path d="M130 268c-24-4-42-22-50-46M130 302c22-4 38-18 46-38"
+                stroke="#6f8f6a" stroke-width="2.4" fill="none" stroke-linecap="round" />
+          <path d="M80 222c-14 8-20 26-14 42 16 2 30-10 34-26z" fill="#e4ede1" stroke="#6f8f6a" stroke-width="2" />
+          <path d="M176 264c14 8 20 26 14 42-16 2-30-10-34-26z" fill="#e4ede1" stroke="#6f8f6a" stroke-width="2" />
+          <g fill="#2f4a34" opacity=".22">
+            <circle cx="66" cy="128" r="3" /><circle cx="206" cy="104" r="2.4" />
+            <circle cx="220" cy="196" r="3.2" /><circle cx="46" cy="300" r="2.6" />
+          </g>
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- ================= ÜBER UNS ================= -->
-  <section id="ueber-uns">
-    <div class="container about-grid">
-      <div class="about-text">
-        <span class="kicker">Über uns</span>
-        <h2>Kleine Auszeit, große Sortenvielfalt</h2>
-        <p>Bei Calla Bubble Tea Co. dreht sich alles um den perfekten Moment zwischen Sirup, Tee und Topping. Wir mixen unsere Bubble Teas frisch für jede Bestellung und kombinieren klassische Aromen mit verspielten neuen Ideen.</p>
-        <p>Ob nach der Uni, in der Mittagspause oder auf dem Weg durch die Freiburger Innenstadt: In unserem kleinen Laden in der Habsburgerstraße nehmen wir uns Zeit für hübsche Farben, viele Toppings und eine Prise Blütenzauber in jedem Becher.</p>
-        <p>Auch ohne eigene Ladenfläche zum Verweilen sind wir für alle da, die es unkompliziert und lecker mögen — vorbeikommen, mitnehmen oder liefern lassen.</p>
-      </div>
-      <div class="about-visual">
-        <svg class="flower-icon" style="color:rgba(255,255,255,.92)"><use href="#calla-flower"/></svg>
-      </div>
-    </div>
-  </section>
+  <div class="rule" aria-hidden="true"></div>
 
-  <!-- ================= HIGHLIGHTS ================= -->
-  <section id="highlights" class="section-alt">
-    <div class="container">
+  <!-- ================= ANATOMIE =================
+       Statt "Bubble-Tea-Vielfalt" als Kachel: die Schichten eines
+       Bechers, benannt wie auf einer botanischen Tafel. Das erklärt
+       das Produkt und ist zugleich das Bild der Seite. -->
+  <section class="section anatomy" id="anatomie">
+    <div class="wrap">
       <div class="section-head">
-        <span class="kicker">Highlights</span>
-        <h2>Was unsere Becher besonders macht</h2>
-        <p>Vier gute Gründe, warum sich der Umweg zu uns lohnt.</p>
+        <p class="kicker">Tafel I</p>
+        <h2>Anatomie eines Bechers</h2>
+        <p class="section-note">
+          Ein Bubble Tea ist kein gerührtes Getränk, sondern ein geschichtetes.
+          Von oben nach unten sieht das so aus — und in dieser Reihenfolge wird
+          er auch gebaut.
+        </p>
       </div>
 
-      <div class="highlights-grid">
-        <article class="highlight-card">
-          <div class="highlight-icon c-lilac">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--lilac-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.4 10.6A2 2 0 0 1 15.6 20H8.4a2 2 0 0 1-2-1.4L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M9 12v4M12 12v4M15 12v4"/></svg>
-          </div>
-          <h3>Bubble-Tea-Vielfalt</h3>
-          <p>Von fruchtig-frisch bis cremig-mild — für jede Stimmung die passende Teebasis und der richtige Sirup.</p>
+      <div class="anatomy-grid">
+        <figure class="plate">
+          <svg viewBox="0 0 260 420" role="img" aria-label="Querschnitt eines Bubble-Tea-Bechers mit sieben nummerierten Schichten von der Folie bis zu den Perlen.">
+            <!-- Halm -->
+            <rect x="150" y="10" width="20" height="150" rx="10" transform="rotate(9 160 85)" fill="#e4ede1" stroke="#2f4a34" stroke-width="2.4" />
+            <!-- Folie -->
+            <path d="M34 66h192l-4 18H38z" fill="#f3efe2" stroke="#2f4a34" stroke-width="2.4" />
+            <!-- Becher -->
+            <path d="M40 84h180l-22 296a26 26 0 0 1-26 24H88a26 26 0 0 1-26-24z" fill="#fdfcf7" stroke="#2f4a34" stroke-width="2.4" />
+            <clipPath id="cc"><path d="M40 84h180l-22 296a26 26 0 0 1-26 24H88a26 26 0 0 1-26-24z" /></clipPath>
+            <g clip-path="url(#cc)">
+              <!-- Schaum -->
+              <path d="M40 118h180v34H40z" fill="#f6f0dd" />
+              <!-- Teebasis -->
+              <path d="M40 152h180v112H40z" fill="#e3d5b4" />
+              <!-- Sirup / Frucht -->
+              <path d="M40 264h180v46H40z" fill="#e8c765" opacity=".75" />
+              <!-- Eis -->
+              <g fill="#ffffff" opacity=".62">
+                <rect x="62" y="166" width="34" height="30" rx="5" transform="rotate(-12 79 181)" />
+                <rect x="126" y="188" width="32" height="28" rx="5" transform="rotate(9 142 202)" />
+                <rect x="96" y="226" width="30" height="26" rx="5" transform="rotate(-6 111 239)" />
+                <rect x="158" y="232" width="28" height="26" rx="5" transform="rotate(14 172 245)" />
+              </g>
+              <!-- Perlen -->
+              <g fill="#3a2f26">
+                <circle cx="80" cy="358" r="15" /><circle cx="118" cy="372" r="16" />
+                <circle cx="158" cy="356" r="14" /><circle cx="100" cy="326" r="13" />
+                <circle cx="142" cy="322" r="12" /><circle cx="176" cy="382" r="12" />
+              </g>
+            </g>
+            <!-- Leitlinien mit Ziffern -->
+            <g stroke="#2f4a34" stroke-width="1.4" fill="none" opacity=".7">
+              <path d="M196 40h44M226 76h14M226 134h14M226 206h14M226 286h14M226 350h14M226 400h14" />
+            </g>
+            <g fill="#2f4a34" font-family="Manrope, sans-serif" font-size="15" font-weight="700">
+              <text x="246" y="45">1</text><text x="246" y="81">2</text><text x="246" y="139">3</text>
+              <text x="246" y="211">4</text><text x="246" y="291">5</text><text x="246" y="355">6</text>
+              <text x="246" y="405">7</text>
+            </g>
+          </svg>
+        </figure>
+
+        <ol class="legend-list">
+          <li><span class="lg-no">1</span><div><h3>Halm</h3><p>Breit genug für Perlen. Der schmale Trinkhalm vom Kaffeeladen funktioniert hier nicht.</p></div></li>
+          <li><span class="lg-no">2</span><div><h3>Folie</h3><p>Verschweißt statt Deckel. Übersteht die Fahrradtasche, solange der Becher aufrecht steht.</p></div></li>
+          <li><span class="lg-no">3</span><div><h3>Schaum</h3><p>Bei Milchtee eine feine Haube — sie hält das Aroma oben, statt es sofort zu verlieren.</p></div></li>
+          <li><span class="lg-no">4</span><div><h3>Teebasis</h3><p>Schwarz, grün oder Oolong. Sie entscheidet mehr über den Geschmack als der Sirup.</p></div></li>
+          <li><span class="lg-no">5</span><div><h3>Sirup &amp; Frucht</h3><p>Frisch angesetzt, in gewünschter Süße. Weniger geht immer — mehr selten.</p></div></li>
+          <li><span class="lg-no">6</span><div><h3>Eis</h3><p>Auf Wunsch weniger. Weniger Eis heißt mehr Getränk, aber auch schneller lauwarm.</p></div></li>
+          <li><span class="lg-no">7</span><div><h3>Toppings</h3><p>Ganz unten, wo sie hingehören. Was oben schwimmt, ist entweder Popping Boba oder ein Missgeschick.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOPPINGS ================= -->
+  <section class="section toppings" id="toppings">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Tafel II</p>
+        <h2>Was unten liegt</h2>
+        <p class="section-note">
+          Vier Grundtypen, die sich nicht nur im Geschmack unterscheiden,
+          sondern auch darin, wie sie sich verhalten, wenn der Becher eine
+          halbe Stunde unterwegs ist.
+        </p>
+      </div>
+
+      <div class="topping-grid">
+        <article class="topping">
+          <span class="tp-visual" aria-hidden="true">
+            <span class="tp-dot" style="--c:#3a2f26"></span>
+            <span class="tp-dot" style="--c:#463a2f"></span>
+            <span class="tp-dot" style="--c:#3a2f26"></span>
+          </span>
+          <h3>Tapioka-Perlen</h3>
+          <p>Der Klassiker: weich mit Biss, leicht karamellig. Frisch gekocht am besten.</p>
+          <p class="tp-travel"><strong>Unterwegs:</strong> nach etwa 30 Minuten werden sie fester. Wer weit fährt, bestellt sie lieber nicht.</p>
         </article>
 
-        <article class="highlight-card">
-          <div class="highlight-icon c-mint">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#3f8f6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="14" r="2.4"/><circle cx="13" cy="9" r="2.4"/><circle cx="17.5" cy="16" r="2.4"/></svg>
-          </div>
-          <h3>Toppings nach Wahl</h3>
-          <p>Klassische Perlen, fruchtige Popping Boba oder Pudding-Würfel — kombinierbar ganz nach Geschmack.</p>
+        <article class="topping">
+          <span class="tp-visual" aria-hidden="true">
+            <span class="tp-dot" style="--c:#e8834a"></span>
+            <span class="tp-dot" style="--c:#e8c765"></span>
+            <span class="tp-dot" style="--c:#d95f7a"></span>
+          </span>
+          <h3>Popping Boba</h3>
+          <p>Dünne Hülle, Fruchtsaft innen, platzt beim Draufbeißen. Farbig und laut im Geschmack.</p>
+          <p class="tp-travel"><strong>Unterwegs:</strong> unempfindlich. Die beste Wahl für Lieferung und längere Wege.</p>
         </article>
 
-        <article class="highlight-card">
-          <div class="highlight-icon c-pink">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9578e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.3-9C1.2 8.6 3 5 6.6 5c2 0 3.4 1.3 5.4 3.2C14 6.3 15.4 5 17.4 5 21 5 22.8 8.6 21.3 12c-2.3 4.4-9.3 9-9.3 9z"/></svg>
-          </div>
-          <h3>Frische Zutaten</h3>
-          <p>Wir setzen auf frisch zubereitete Sirupe und sorgfältig ausgewählte Zutaten für runde, klare Aromen.</p>
+        <article class="topping">
+          <span class="tp-visual" aria-hidden="true">
+            <span class="tp-dot tp-square" style="--c:#f2dc9c"></span>
+            <span class="tp-dot tp-square" style="--c:#f6e6b8"></span>
+          </span>
+          <h3>Pudding</h3>
+          <p>Weicher Eierpudding in Würfeln, mild und süß. Lässt sich mit dem Halm mitziehen.</p>
+          <p class="tp-travel"><strong>Unterwegs:</strong> hält gut, wird aber weicher. Kein Problem, eher eine Frage des Geschmacks.</p>
         </article>
 
-        <article class="highlight-card">
-          <div class="highlight-icon c-lilac2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#6a3f8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 16 0c0 3-2 5-4 6H8c-2-1-4-3-4-6z"/><path d="M9 22h6"/></svg>
-          </div>
-          <h3>Süße Kleinigkeiten</h3>
-          <p>Kleine Desserts als Begleitung zum Bubble Tea — die ideale süße Pause für zwischendurch.</p>
+        <article class="topping">
+          <span class="tp-visual" aria-hidden="true">
+            <span class="tp-dot tp-square" style="--c:#e4ede1"></span>
+            <span class="tp-dot tp-square" style="--c:#eff5ec"></span>
+            <span class="tp-dot tp-square" style="--c:#e4ede1"></span>
+          </span>
+          <h3>Nata de Coco</h3>
+          <p>Kokosgelee-Würfel, bissfest und kaum süß. Für alle, denen Perlen zu weich sind.</p>
+          <p class="tp-travel"><strong>Unterwegs:</strong> verändert sich praktisch nicht. Auch nach einer Stunde noch wie frisch.</p>
         </article>
       </div>
+
+      <p class="section-footnote">
+        Sorten und Toppings sind für diesen Entwurf zusammengestellt und noch
+        nicht mit dem Laden abgestimmt. Die verbindliche Auswahl steht im Laden
+        und auf den Lieferplattformen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= UNTERWEGS ================= -->
+  <section class="section onthego" id="unterwegs">
+    <div class="wrap onthego-grid">
+      <div>
+        <p class="kicker">Für den Weg</p>
+        <h2>Vier Dinge, die ein Becher unterwegs braucht</h2>
+        <p>
+          Ein Bubble Tea, der zwanzig Minuten in einer Tasche verbringt, ist
+          nicht derselbe wie einer, den man an der Theke austrinkt. Das lässt
+          sich nicht ändern — man kann es aber bei der Bestellung mitdenken.
+        </p>
+      </div>
+
+      <ol class="tips">
+        <li><span>01</span><div><h3>Aufrecht transportieren</h3><p>Die Folie hält Druck von oben aus, nicht von der Seite. Becher stehend in die Tasche.</p></div></li>
+        <li><span>02</span><div><h3>Weniger Eis bei kurzen Wegen</h3><p>Mehr Getränk im Becher. Bei langen Wegen umgekehrt: volles Eis, dann kommt er kalt an.</p></div></li>
+        <li><span>03</span><div><h3>Süße eine Stufe runter</h3><p>Kalt und stehend wirkt Süße stärker. Wer 50 % bestellt, trifft es unterwegs meistens besser.</p></div></li>
+        <li><span>04</span><div><h3>Popping Boba für die Lieferung</h3><p>Tapioka wird fest, Popping Boba nicht. Die einfachste Regel der ganzen Karte.</p></div></li>
+      </ol>
     </div>
   </section>
 
   <!-- ================= BESTELLEN ================= -->
-  <section id="bestellen">
-    <div class="container">
+  <section class="section order" id="bestellen">
+    <div class="wrap">
       <div class="section-head">
-        <span class="kicker">Bestellen</span>
-        <h2>Bequem online bestellen</h2>
-        <p>Calla Bubble Tea Co. liefert über die folgenden Plattformen. Die Links führen zu den jeweiligen externen Anbietern.</p>
+        <p class="kicker">Bestellen</p>
+        <h2>Zwei Wege zum Becher</h2>
+        <p class="section-note">
+          Vorbeikommen geht immer. Für alles andere gibt es die
+          Lieferplattformen — Karte, Preise und Liefergebiet stehen jeweils dort.
+        </p>
       </div>
 
       <div class="order-grid">
-        <article class="order-card lieferando">
-          <div class="platform-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#3f8f6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-          </div>
-          <div>
-            <h3>Lieferando</h3>
-            <span class="external-note">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M10 14L20 4M19 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              Externe Plattform, öffnet in neuem Tab
-            </span>
-          </div>
-          <p class="desc">Bestellung &amp; Lieferung über die Lieferando-Startseite.</p>
-          <a class="btn btn-outline btn-block" href="https://www.lieferando.de" target="_blank" rel="noopener noreferrer">Zu Lieferando</a>
+        <article class="order-card">
+          <h3>Vor Ort</h3>
+          <p>Habsburgerstraße 72. Frisch gemixt, verschweißt, mitgenommen. Die schnellste und die beste Variante — Tapioka ist dann noch weich.</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Habsburgerstra%C3%9Fe%2072%2C%2079104%20Freiburg%20im%20Breisgau" target="_blank" rel="noopener">Route planen</a>
         </article>
 
-        <article class="order-card ubereats">
-          <div class="platform-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9578e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l7-7 7 7M8 21V12h8v9"/></svg>
+        <article class="order-card">
+          <h3>Liefern lassen</h3>
+          <p>Calla ist auf den gängigen Lieferplattformen gelistet. Die Links führen auf die jeweilige Startseite; dort nach „Calla Bubble Tea" suchen.</p>
+          <div class="order-links">
+            <a class="btn btn-primary" href="https://www.lieferando.de" target="_blank" rel="noopener">Lieferando</a>
+            <a class="btn btn-primary" href="https://www.ubereats.com/de" target="_blank" rel="noopener">Uber Eats</a>
           </div>
-          <div>
-            <h3>Uber Eats</h3>
-            <span class="external-note">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M10 14L20 4M19 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              Externe Plattform, öffnet in neuem Tab
-            </span>
-          </div>
-          <p class="desc">Bestellung &amp; Lieferung über die Uber-Eats-Startseite.</p>
-          <a class="btn btn-outline btn-block" href="https://www.ubereats.com/de" target="_blank" rel="noopener noreferrer">Zu Uber Eats</a>
+          <p class="order-note">Externe Anbieter, öffnen in einem neuen Tab. Verfügbarkeit und Preise richten sich nach den Angaben dort.</p>
         </article>
       </div>
-
-      <p class="order-note">Hinweis: Die Bestell-Buttons führen zu den Startseiten der jeweiligen Lieferplattform. Verfügbarkeit, Speisekarte und Liefergebiet richten sich nach den Angaben dort.</p>
     </div>
   </section>
 
-  <!-- ================= STANDORT & KONTAKT ================= -->
-  <section id="kontakt" class="section-alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">Standort &amp; Kontakt</span>
-        <h2>Vorbeikommen oder schreiben</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-row">
-            <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a3d7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
-            <div>
-              <h4>Adresse</h4>
-              <p>Habsburgerstraße 72<br>Freiburg im Breisgau</p>
-            </div>
-          </div>
-
-          <div class="contact-row">
-            <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a3d7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-            <div>
-              <h4>E-Mail <span class="placeholder-tag">Platzhalter</span></h4>
-              <p><a href="mailto:hallo@calla-bubbletea.de" class="mail-link">hallo@calla-bubbletea.de</a></p>
-            </div>
-          </div>
-
-          <div class="contact-row">
-            <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a3d7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
-            <div>
-              <h4>Öffnungszeiten <span class="placeholder-tag">Platzhalter</span></h4>
-              <p>Aktuelle Öffnungszeiten bitte den Angaben auf Lieferando, Uber Eats oder Instagram entnehmen.</p>
-            </div>
-          </div>
-
-          <div class="contact-row">
-            <a href="mailto:hallo@calla-bubbletea.de" class="btn btn-primary btn-block">Kontakt per E-Mail</a>
-          </div>
-        </div>
-
-        <a class="map-visual" href="https://www.google.com/maps/search/?api=1&query=Habsburgerstra%C3%9Fe%2072%2C%20Freiburg%20im%20Breisgau" target="_blank" rel="noopener noreferrer" aria-label="Standort in Google Maps öffnen: Habsburgerstraße 72, Freiburg im Breisgau">
-          <svg class="map-pattern" viewBox="0 0 200 200" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 40 C 40 10, 80 70, 120 40 S 200 10, 200 40 V200 H0 Z" fill="rgba(255,255,255,.25)"/>
-            <path d="M0 90 C 50 60, 90 120, 140 90 S 200 60, 200 90 V200 H0 Z" fill="rgba(255,255,255,.18)"/>
-          </svg>
-          <svg class="pin" viewBox="0 0 24 24" fill="#fff"><path d="M12 22s8-8.4 8-14a8 8 0 1 0-16 0c0 5.6 8 14 8 14z" opacity=".95"/><circle cx="12" cy="8" r="3" fill="var(--lilac-deep)"/></svg>
-          <span class="map-label">
-            Habsburgerstraße 72, Freiburg i. Br.
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M10 14L20 4M19 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-          </span>
+  <!-- ================= KONTAKT ================= -->
+  <section class="section contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker">Vorbeikommen</p>
+        <h2>Habsburgerstraße 72</h2>
+        <p class="section-note">
+          Nördlich der Innenstadt, an der Achse Richtung Uni. Ein kleiner Laden
+          ohne Sitzplätze — dafür ist man in zwei Minuten wieder draußen.
+        </p>
+        <a class="contact-link" href="https://www.google.com/maps/search/?api=1&amp;query=Habsburgerstra%C3%9Fe%2072%2C%2079104%20Freiburg%20im%20Breisgau" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c-5-5-8-8.6-8-12a8 8 0 0 1 16 0c0 3.4-3 7-8 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span><strong>Habsburgerstraße 72</strong><span>79104 Freiburg im Breisgau · In Google Maps öffnen</span></span>
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- ================= CTA STRIP ================= -->
-  <section class="cta-strip">
-    <div class="container">
-      <h2>Lust auf einen frisch gemixten Bubble Tea?</h2>
-      <p>Jetzt bestellen oder in der Habsburgerstraße vorbeischauen.</p>
-      <a href="#bestellen" class="btn btn-outline">Zur Bestellung</a>
+      <aside class="hours-card">
+        <h3>Öffnungszeiten</h3>
+        <p>
+          Für diesen Laden gibt es keine verlässlich veröffentlichten Zeiten.
+          Statt eine Platzhalterzeile zu zeigen, sagen wir es offen: Die
+          aktuellen Zeiten stehen auf den Lieferplattformen und auf Instagram.
+        </p>
+        <p class="todo">
+          <strong>Vor dem Launch:</strong> Öffnungszeiten, Telefonnummer und
+          eine echte E-Mail-Adresse ergänzen. Öffnungszeiten sind die
+          meistgesuchte Angabe auf einer Ladenseite — hier fehlt sie derzeit
+          als Einzige.
+        </p>
+      </aside>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
+  <div class="wrap footer-inner">
     <div class="footer-brand">
-      <svg class="flower-icon" width="24" height="24" style="color:#e9c8f0"><use href="#calla-flower"/></svg>
-      Calla Bubble Tea Co.
+      <span class="brand-name">Calla Bubble Tea Co.</span>
+      <p>Habsburgerstraße 72 · 79104 Freiburg im Breisgau<br />Frisch gemixt, verschweißt, für den Weg gebaut.</p>
     </div>
-    <div class="footer-note">
-      © 2026 Calla Bubble Tea Co. · Habsburgerstraße 72, Freiburg im Breisgau
-      <br>
-      <span class="draft-tag">Website-Entwurf</span>
-    </div>
+    <nav class="footer-links" aria-label="Fußzeile">
+      <a href="#anatomie">Anatomie</a>
+      <a href="#toppings">Toppings</a>
+      <a href="#unterwegs">Unterwegs</a>
+      <a href="#bestellen">Bestellen</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; <span id="year">2026</span> Calla Bubble Tea Co.</span>
+    <span class="footer-note">Website-Entwurf, keine offizielle Seite des Ladens. Sorten und Toppings sind Beispiele; Öffnungszeiten, Kontaktdaten, Impressum und Datenschutzerklärung fehlen und sind vor einem echten Launch Pflicht.</span>
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
